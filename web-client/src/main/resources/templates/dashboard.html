@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+
+<div>
+    Access Token: <p th:text="${access_token}"></p>
+</div>
+<div>
+    Id Token: <p th:text="${id_token}"></p>
+</div>
+<div>
+    Role: <p th:text="${role}"></p>
+</div>
+<div>
+    Product Service Port:<p th:text="${product_service_port}"></p>
+</div>
+<div>
+    Profile Service Port:<p th:text="${profile_service_port}"></p>
+</div>
+
+<div th:if="${products.empty}">
+    <div>No products found.</div>
+</div>
+<div th:each="product:${products}">
+    <p th:text="${product.productName}"></p>
+
+</div>
+<div>
+
+</div>
+
+</body>
+</html>
